@@ -2,7 +2,7 @@ schema: draft-07
 name: "aws-ecs-cluster"
 description: "AWS ECS is Amazon's fully managed container orchestration service, making it easy for users to deploy, manage and scale containerized workloads."
 source_url: github.com/massdriver-cloud/aws-ecs-cluster
-access: "private"
+access: "public"
 type: "infrastructure"
 
 
@@ -169,7 +169,11 @@ connections:
 
 
 artifacts:
-  properties: {}
+  required:
+    - cluster
+  properties:
+    cluster:
+      $ref: massdriver/aws-ecs-cluster
 
 
 ui:
