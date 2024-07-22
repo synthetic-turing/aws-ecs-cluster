@@ -86,6 +86,12 @@ params:
                     const: c5.18xlarge
                   - title: C5 High-CPU 24xlarge (96 vCPUs, 192.0 GiB)
                     const: c5.24xlarge
+                  - title: M7g General Purpose Medium (1 vCPUs, 4.0 GiB)
+                    const: m7g.medium
+                  - title: M7g General Purpose Large (2 vCPUs, 8.0 GiB)
+                    const: m7g.large
+                  - title: M7g General Purpose Extra Large (4 vCPUs, 16.0 GiB)
+                    const: m7g.xlarge
                   - title: M5 General Purpose Large (2 vCPUs, 8.0 GiB)
                     const: m5.large
                   - title: M5 General Purpose Extra Large (4 vCPUs, 16.0 GiB)
