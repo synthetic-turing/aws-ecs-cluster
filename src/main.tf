@@ -12,6 +12,7 @@ locals {
     ["FARGATE",
     "FARGATE_SPOT"]
   ))
+  instance_acrchitecture = var.cluster.instance_architecture
 }
 
 resource "aws_ecs_cluster" "main" {

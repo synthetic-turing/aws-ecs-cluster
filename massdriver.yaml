@@ -1,10 +1,9 @@
 schema: draft-07
 name: "aws-ecs-cluster"
 description: "AWS ECS is Amazon's fully managed container orchestration service, making it easy for users to deploy, manage and scale containerized workloads."
-source_url: github.com/massdriver-cloud/aws-ecs-cluster
-access: "public"
+source_url: github.com/synthetic-turing/aws-ecs-cluster
+access: "private"
 type: "infrastructure"
-
 
 params:
   examples:
@@ -32,6 +31,16 @@ params:
         - instances
         - ingress
       properties:
+        instance_architecture:
+          title: Instance Architecture
+          description: Select the instance architecture for your ECS cluster
+          type: string
+          oneOf:
+            - title: x86_64
+              const: x86_64
+            - title: arm64
+              const: arm64
+          default: x86_64
         instances:
           type: array
           title: ECS Container Instances
@@ -194,6 +203,7 @@ ui:
     - "*"
   cluster:
     ui:order:
+      - instance_architecture
       - instances
       - ingress
       - "*"
